@@ -192,7 +192,7 @@ This project supports:
 ### Team Members:
 - **Nimmagadda Harini** – Team Leader & Data Analyst  
 - **Bhavanam Gowritulasi** – Database & SQL Analyst  
-- **Yejjusi Vamprasad** – Visualization Developer  
+- **Yejju Siva Prasad** – Visualization Developer  
 - **Alla Pujitha** – Documentation & Testing  
 
 ---
