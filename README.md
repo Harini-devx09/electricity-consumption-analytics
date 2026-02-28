@@ -87,3 +87,119 @@ Explores electricity usage patterns across residential, commercial, and industri
 ---
 
 ## 🧩 System Architecture
+
+CSV Dataset
+↓
+MySQL Database
+↓
+SQL Queries
+↓
+Tableau Desktop
+↓
+Dashboards & Story
+↓
+Tableau Public
+↓
+Flask Web Application
+
+
+### Architecture Explanation:
+- Dataset collected from POSOCO reports  
+- Data stored in MySQL database  
+- SQL queries used for analysis and filtering  
+- Tableau connected to MySQL for visualization  
+- Dashboards and stories created in Tableau  
+- Visualizations published on Tableau Public  
+- Flask web application embeds Tableau dashboards for user access  
+
+---
+
+## 📈 Data Visualizations Created
+
+- 2019 State-wise Electricity Consumption  
+- 2020 State-wise Electricity Consumption  
+- Total Electricity Consumption  
+- Usage by Region  
+- Top N and Bottom N States  
+- Month-wise Consumption (2019 & 2020)  
+- Region-wise Total Consumption  
+- Usage Before and After Lockdown  
+- Quarter-wise Consumption  
+- Usage by Year  
+
+---
+
+## 📊 Dashboards & Story
+
+- Multiple interactive dashboards combining related visualizations  
+- Filters for region, state, sector, and time  
+- Tableau Story with multiple scenes explaining insights step-by-step  
+- Published on Tableau Public  
+- Embedded into a Flask-based web interface  
+
+---
+
+## 🌐 Web Application Features
+
+- Flask-based responsive web interface  
+- Embedded Tableau dashboards and story  
+- User-friendly navigation  
+- Centralized access to analytics and insights  
+
+---
+
+## ⚙️ Performance & Analysis Metrics
+
+- Large-scale time-series data rendered via MySQL  
+- Multiple calculated fields in Tableau  
+- Extensive use of filters and parameters  
+- Optimized dashboard responsiveness  
+
+---
+
+## 📌 Current Project Status
+
+### ✔ Completed:
+- Data collection and preprocessing  
+- Database integration and SQL analysis  
+- Tableau visualizations, dashboards, and story  
+- Tableau Public publishing  
+- Flask web application development  
+- Cloud deployment using Render  
+
+### 🔜 Future Enhancements:
+- Real-time data integration  
+- Advanced forecasting models  
+- Enhanced analytics and interactivity  
+
+---
+
+## 🎓 Project Impact
+
+This project supports:
+- **Utility companies** – better demand forecasting and grid optimization  
+- **Policymakers** – data-driven energy planning  
+- **Researchers** – understanding electricity consumption trends  
+- **Consumers** – awareness of energy usage behavior  
+
+---
+
+## 👩‍💻 Team Information
+
+- **Team ID:** LTVIP2026TMIDS41306  
+- **Team Size:** 4  
+
+### Team Members:
+- **Nimmagadda Harini** – Team Leader & Data Analyst  
+- **Bhavanam Gowritulasi** – Database & SQL Analyst  
+- **Yejjusi Vamprasad** – Visualization Developer  
+- **Alla Pujitha** – Documentation & Testing  
+
+---
+
+## 🏁 Conclusion
+
+**Plugging into the Future** demonstrates how data analytics and visualization can transform raw electricity consumption data into actionable insights.  
+By integrating SQL, Tableau, and Flask, the project delivers a scalable and interactive analytics solution for understanding electricity usage patterns across India.
+
+---
