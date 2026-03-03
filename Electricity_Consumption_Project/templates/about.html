@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About | Electricity Analytics</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<style>
+/* ===== ABOUT PAGE SPECIFIC STYLES ===== */
+
+.team-section {
+    padding: 40px 60px 60px;
+    background-color: #f5f7fb;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.team-card {
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    text-align: center;
+    padding-bottom: 25px;
+    overflow: hidden;
+}
+
+.team-card-top {
+    background: #0b1f3a;
+    height: 60px;
+}
+
+.team-photo {
+    width: 120px;
+    height: 120px;
+    background: #e0e6ed;
+    border-radius: 50%;
+    margin: -40px auto 10px;
+    border: 5px solid white;
+}
+
+.team-card h3 {
+    margin-top: 10px;
+    color: #0b1f3a;
+}
+
+.team-role {
+    color: #f7b500;
+    font-weight: 600;
+    margin: 5px 0 10px;
+}
+
+.team-desc {
+    font-size: 15px;
+    color: #555;
+    padding: 0 15px;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: -40px auto 10px;
+    border: 5px solid white;
+    overflow: hidden;
+    background: #e0e6ed;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* IMPORTANT */
+}
+</style>
+
+</head>
+<body>
+
+<!-- ===== NAVBAR (SAME AS OTHER PAGES) ===== -->
+<header class="navbar">
+    <div class="logo">Electricity Analytics</div>
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/story">Story</a></li>
+        <li><a href="/visualizations">Visualizations</a></li>
+        <li><a class="active" href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+</header>
+
+<!-- ===== PAGE HEADER (CONSISTENT) ===== -->
+<section class="page-header">
+    <h1>About Our Team</h1>
+    <p>
+        This project was developed by a team of four members as part of an
+        Electricity Consumption Insights and Trend Analysis initiative.
+    </p>
+</section>
+
+<!-- ===== TEAM SECTION ===== -->
+<section class="team-section">
+
+    <div class="team-grid">
+
+        <!-- TEAM LEADER -->
+        <div class="team-card">
+            <div class="team-card-top"></div>
+            <div class="team-photo">
+                <img src="{{ url_for('static', filename='images/Harini.jpeg') }}">
+            </div>
+            <h3>Nimmagadda Harini</h3>
+            <div class="team-role">Team Leader & Data Analyst</div>
+            <div class="team-desc">
+                Led the project development, coordinated team activities,
+                and contributed to Tableau dashboards and web integration.
+            </div>
+        </div>
+
+        <!-- MEMBER 2 -->
+        <div class="team-card">
+            <div class="team-card-top"></div>
+            <div class="team-photo">
+                <img src="{{ url_for('static', filename='images/Thu.jpeg') }}">
+            </div>
+            <h3>Bhavanam Gowritulasi</h3>
+            <div class="team-role">Database & SQL Analyst</div>
+            <div class="team-desc">
+                Performed data cleaning and preprocessing, and assisted in
+                SQL-based analysis and trend identification.
+            </div>
+        </div>
+
+        <!-- MEMBER 3 -->
+        <div class="team-card">
+            <div class="team-card-top"></div>
+            <div class="team-photo">
+                <img src="{{ url_for('static', filename='images/Shiva.jpeg') }}">
+            </div>
+            <h3>Yejju Siva Prasad</h3>
+            <div class="team-role">Visualization Developer</div>
+            <div class="team-desc">
+                Designed interactive Tableau visualizations and supported
+                regional and sector-wise analysis.
+            </div>
+        </div>
+
+        <!-- MEMBER 4 -->
+        <div class="team-card">
+            <div class="team-card-top"></div>
+            <div class="team-photo">
+                <img src="{{ url_for('static', filename='images/pujitha.jpeg') }}">
+            </div>
+            <h3>Alla Pujitha</h3>
+            <div class="team-role">Documentation & Testing</div>
+            <div class="team-desc">
+                Prepared project documentation, tested dashboards, and
+                validated analysis results.
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===== FOOTER (CONSISTENT) ===== -->
+<footer>
+    <p>© 2026 Electricity Consumption Analytics Project</p>
+</footer>
+
+</body>
+</html>

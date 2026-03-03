@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard | Electricity Analytics</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<style>
+/* Extra safety fixes for Tableau */
+.tableauPlaceholder {
+    width: 100%;
+    margin: 0 auto;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">Electricity Analytics</div>
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/story">Story</a></li>
+        <li><a href="/visualizations">Visualizations</a></li>
+        <li><a class="active" href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <h1>Interactive Electricity Consumption Dashboards</h1>
+    <p>
+        Explore region-wise, state-wise, and sector-wise electricity consumption
+        trends across India using Tableau Public dashboards.
+    </p>
+</section>
+
+<!-- DASHBOARD 1 -->
+<section class="dashboard-section">
+    <h2>Dashboard 1: Overview & Regional Analysis</h2>
+
+    <div class="tableau-container">
+        <div class='tableauPlaceholder' id='viz1772276391237'>
+            <noscript>
+                <img src='https://public.tableau.com/static/images/Pl/Pluggingintothefuture/Dashboard1/1_rss.png'>
+            </noscript>
+
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https://public.tableau.com/' />
+                <param name='name' value='Pluggingintothefuture/Dashboard1' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+            </object>
+        </div>
+    </div>
+</section>
+
+<!-- DASHBOARD 2 -->
+<section class="dashboard-section">
+    <h2>Dashboard 2: State-wise & Sector-wise Consumption</h2>
+
+    <div class="tableau-container">
+        <div class='tableauPlaceholder' id='viz1772276442690'>
+            <noscript>
+                <img src='https://public.tableau.com/static/images/Pl/Pluggingintothefuture/Dashboard2/1_rss.png'>
+            </noscript>
+
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https://public.tableau.com/' />
+                <param name='name' value='Pluggingintothefuture/Dashboard2' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+            </object>
+        </div>
+    </div>
+</section>
+
+<!-- DASHBOARD 3 -->
+<section class="dashboard-section">
+    <h2>Dashboard 3: Trend & Peak Demand Analysis</h2>
+
+    <div class="tableau-container">
+        <div class='tableauPlaceholder' id='viz1772276466345'>
+            <noscript>
+                <img src='https://public.tableau.com/static/images/Pl/Pluggingintothefuture/Dashboard3/1_rss.png'>
+            </noscript>
+
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https://public.tableau.com/' />
+                <param name='name' value='Pluggingintothefuture/Dashboard3' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+            </object>
+        </div>
+    </div>
+</section>
+
+<!-- TABLEAU SCRIPT (ONCE) -->
+<script type="text/javascript">
+
+/* Dashboard 1 */
+var viz1 = document
+    .getElementById('viz1772276391237')
+    .getElementsByTagName('object')[0];
+viz1.style.width = '100%';
+viz1.style.height = '850px';
+
+/* Dashboard 2 */
+var viz2 = document
+    .getElementById('viz1772276442690')
+    .getElementsByTagName('object')[0];
+viz2.style.width = '100%';
+viz2.style.height = '850px';
+
+/* Dashboard 3 */
+var viz3 = document
+    .getElementById('viz1772276466345')
+    .getElementsByTagName('object')[0];
+viz3.style.width = '100%';
+viz3.style.height = '850px';
+
+/* Load Tableau API once */
+var scriptElement = document.createElement('script');
+scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+document.body.appendChild(scriptElement);
+
+</script>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Electricity Consumption Analytics Project</p>
+</footer>
+
+</body>
+</html>

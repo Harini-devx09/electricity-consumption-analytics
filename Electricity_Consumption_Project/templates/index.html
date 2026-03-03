@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Electricity Consumption Analytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">Electricity Analytics</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/story">Story</a></li>
+            <li><a href="/visualizations">Visualizations</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <h1>Electricity Consumption Insights & Trend Analysis</h1>
+
+            <p>
+                An interactive analytics platform to explore state-wise, region-wise,
+                and sector-wise electricity consumption trends in India.
+            </p>
+
+            <p class="tech">
+                Built using MySQL, SQL, Tableau & Flask
+            </p>
+
+            <a href="/dashboard" class="btn-primary">View Dashboard</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Electricity Consumption Analytics Project</p>
+    </footer>
+
+</body>
+</html>
