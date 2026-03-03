@@ -1,1 +1,0 @@
-console.log("Electricity Consumption Website Loaded");
