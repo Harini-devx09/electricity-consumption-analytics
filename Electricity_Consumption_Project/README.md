@@ -1,1 +1,0 @@
-# electricity-consumption-analytics
