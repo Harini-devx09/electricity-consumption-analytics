@@ -1,0 +1,325 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:#0b1f3a;
+color:white;
+padding:22px 70px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+}
+
+.nav-links{
+list-style:none;
+display:flex;
+gap:28px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+font-size:16px;
+}
+
+.nav-links a:hover{
+color:#ffd24c;
+}
+
+/* HERO SECTION */
+
+.hero{
+position:relative;
+height:85vh;
+background-image:url("../images/electricity-bg.png");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(11,31,58,0.75);
+top:0;
+left:0;
+}
+
+.hero-content{
+position:relative;
+max-width:800px;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:48px;
+margin-bottom:20px;
+font-weight:bold;
+}
+
+.hero-content p{
+font-size:18px;
+margin-bottom:15px;
+line-height:1.6;
+}
+
+.hero-content .tech{
+font-size:16px;
+opacity:0.9;
+margin-bottom:30px;
+}
+
+/* BUTTON */
+
+.btn-primary{
+padding:14px 32px;
+background:#f7b500;
+color:#0b1f3a;
+font-weight:bold;
+border-radius:6px;
+text-decoration:none;
+font-size:16px;
+}
+
+.btn-primary:hover{
+background:#e0a800;
+}
+
+/* PAGE BACKGROUND */
+
+body{
+background:#f5f7fb;
+color:#1f2933;
+}
+
+/* PAGE HEADER */
+
+.page-header{
+text-align:center;
+padding:55px 20px 35px;
+}
+
+.page-header h1{
+font-size:42px;
+font-weight:700;
+color:#0b1f3a;
+margin-bottom:12px;
+}
+
+.page-header p{
+font-size:17px;
+color:#334e68;
+max-width:900px;
+margin:auto;
+line-height:1.6;
+}
+
+/* DASHBOARD */
+
+.dashboard-section{
+padding:45px 60px;
+}
+
+.dashboard-section h2{
+text-align:center;
+font-size:28px;
+font-weight:600;
+color:#0b1f3a;
+margin-bottom:25px;
+}
+
+.tableau-container{
+background:white;
+border-radius:12px;
+padding:22px;
+box-shadow:0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* FOOTER */
+
+footer{
+background:#0b1f3a;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+/* ===========================
+   PREDICTION FORM PAGE
+   =========================== */
+
+.main-container{
+display:flex;
+background-image:url("../images/electricity-bg.png");
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.form-box{
+background:rgba(0,0,0,0.85);
+padding:40px;
+width:700px;
+border-radius:40px;
+box-shadow:0 8px 25px rgba(0,0,0,0.4);
+text-align:center;
+}
+
+.form-box h2{
+color:#ffc107;
+margin-bottom:20px;
+}
+
+.form-box label{
+color:white;
+display:block;
+text-align:left;
+margin-top:10px;
+}
+
+.form-box input,
+.form-box select{
+width:100%;
+padding:10px;
+margin-top:5px;
+border:none;
+border-radius:6px;
+}
+
+.form-box button{
+margin-top:15px;
+width:100%;
+padding:12px;
+border:none;
+background:#ffc107;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.form-box button:hover{
+background:#e0a800;
+}
+
+/* ===========================
+   RESULT PAGE
+   =========================== */
+
+.result-container{
+max-width:1000px;
+margin:70px auto;
+text-align:center;
+}
+
+.prediction-card{
+background:white;
+padding:40px;
+border-radius:16px;
+box-shadow:0 15px 40px rgba(0,0,0,0.12);
+margin-bottom:35px;
+}
+
+.prediction-card h2{
+color:#0b1f3a;
+margin-bottom:10px;
+}
+
+.prediction-number{
+font-size:56px;
+font-weight:bold;
+color:#f7b500;
+margin:15px 0;
+}
+
+.unit{
+font-size:20px;
+color:#666;
+margin-left:6px;
+}
+
+.subtitle{
+color:#666;
+font-size:15px;
+}
+
+.graph-card{
+background:white;
+padding:35px;
+border-radius:16px;
+box-shadow:0 15px 40px rgba(0,0,0,0.12);
+}
+
+.chart-container{
+width:100%;
+max-width:900px;
+margin:auto;
+}
+
+.button-area{
+margin-top:35px;
+}
+
+.predict-btn{
+background:#f7b500;
+padding:14px 35px;
+border-radius:8px;
+text-decoration:none;
+color:#0b1f3a;
+font-weight:bold;
+}
+
+.predict-btn:hover{
+background:#e0a800;
+}
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.85);
+z-index:-1;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.page-header h1{
+font-size:32px;
+}
+
+.dashboard-section{
+padding:30px 18px;
+}
+
+.dashboard-section h2{
+font-size:24px;
+}
+
+.form-box{
+width:90%;
+}
+
+.result-container{
+width:90%;
+}
+
+}

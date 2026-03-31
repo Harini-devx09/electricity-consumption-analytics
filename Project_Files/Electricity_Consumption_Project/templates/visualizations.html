@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Visualizations | Electricity Analytics</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<style>
+/* GRID LAYOUT FOR VISUALIZATIONS */
+.viz-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 30px 60px 50px;
+    background-color: #f5f7fb;
+}
+
+.viz-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.viz-title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0b1f3a;
+    margin-bottom: 8px;
+}
+
+.tableauPlaceholder {
+    width: 100%;
+}
+
+.tableauPlaceholder object {
+    width: 100%;
+    height: 360px;   /* FIXED HEIGHT */
+}
+
+/* RESPONSIVE FALLBACK */
+@media (max-width: 1200px) {
+    .viz-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .viz-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">Electricity Analytics</div>
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/story">Story</a></li>
+        <li><a href="/visualizations">Visualizations</a></li>
+        <li><a class="active" href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <h1>Electricity Consumption Visualizations</h1>
+    <p>
+        Key electricity consumption visualizations representing state-wise,
+        region-wise, and time-based usage patterns across India.
+    </p>
+</section>
+
+<!-- VISUALIZATION GRID -->
+<section class="viz-grid">
+
+<!-- 1 -->
+<div class="viz-card">
+    <div class="viz-title">2019 State Consumption</div>
+    <div class="tableauPlaceholder" id="viz1772279224589">
+        <object class="tableauViz" style="display:none;">
+            <param name="host_url" value="https://public.tableau.com/" />
+            <param name="name" value="Pluggingintothefuture/2019StateConsumption" />
+            <param name="tabs" value="no" />
+            <param name="toolbar" value="no" />
+        </object>
+    </div>
+</div>
+
+<!-- 2 -->
+<div class="viz-card">
+    <div class="viz-title">2020 State Consumption</div>
+    <div class="tableauPlaceholder" id="viz1772279527949">
+        <object class="tableauViz" style="display:none;">
+            <param name="host_url" value="https://public.tableau.com/" />
+            <param name="name" value="Pluggingintothefuture/2020StateConsumption" />
+            <param name="tabs" value="no" />
+            <param name="toolbar" value="no" />
+        </object>
+    </div>
+</div>
+
+<!-- 3 -->
+<div class="viz-card">
+    <div class="viz-title">Total Region Consumption</div>
+    <div class="tableauPlaceholder" id="viz1772279635261">
+        <object class="tableauViz" style="display:none;">
+            <param name="host_url" value="https://public.tableau.com/" />
+            <param name="name" value="Pluggingintothefuture/TotalRegionConsumption" />
+            <param name="tabs" value="no" />
+            <param name="toolbar" value="no" />
+        </object>
+    </div>
+</div>
+
+<!-- 4 -->
+<div class="viz-card">
+    <div class="viz-title">Year-wise Consumption by Region</div>
+    <div class="tableauPlaceholder" id="viz1772279709133">
+        <object class="tableauViz" style="display:none;">
+            <param name="host_url" value="https://public.tableau.com/" />
+            <param name="name" value="Pluggingintothefuture/YearWiseConsumptioninRegion" />
+            <param name="tabs" value="no" />
+            <param name="toolbar" value="no" />
+        </object>
+    </div>
+</div>
+
+<!-- 5 -->
+<div class="viz-card">
+    <div class="viz-title">Quarter-wise Usage</div>
+    <div class="tableauPlaceholder" id="viz1772279776625">
+        <object class="tableauViz" style="display:none;">
+            <param name="host_url" value="https://public.tableau.com/" />
+            <param name="name" value="Pluggingintothefuture/QuarterWiseUsage" />
+            <param name="tabs" value="no" />
+            <param name="toolbar" value="no" />
+        </object>
+    </div>
+</div>
+
+<!-- 6 -->
+<div class="viz-card">
+    <div class="viz-title">Usage by Region</div>
+    <div class="tableauPlaceholder" id="viz1772279888056">
+        <object class="tableauViz" style="display:none;">
+            <param name="host_url" value="https://public.tableau.com/" />
+            <param name="name" value="Pluggingintothefuture/UsagebyRegion" />
+            <param name="tabs" value="no" />
+            <param name="toolbar" value="no" />
+        </object>
+    </div>
+</div>
+
+</section>
+
+<!-- TABLEAU SCRIPT (ONCE) -->
+<script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Electricity Consumption Analytics Project</p>
+</footer>
+
+</body>
+</html>

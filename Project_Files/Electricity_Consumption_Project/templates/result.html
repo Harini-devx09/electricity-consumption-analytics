@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>Prediction Result</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background-image : url("{{ url_for('static', filename='images/electricity-bg.png') }}");
+    margin:0;
+    padding:0;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding-top:120px;
+text-align:center;
+}
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+z-index:-1;
+}
+
+h1{
+color:white;
+margin-bottom:35px;
+font-size:40px;
+font-weight:700;
+}
+
+.card{
+    background:white;
+    padding:40px;
+    border-radius:14px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.1);
+    margin-bottom:35px;
+}
+
+.result-number{
+    font-size:55px;
+    font-weight:bold;
+    color:#f4a300;
+}
+
+.unit{
+    font-size:22px;
+    color:#555;
+}
+
+.subtitle{
+    margin-top:10px;
+    color:#666;
+}
+
+.chart-container{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+}
+
+button{
+    background:#f4a300;
+    color:white;
+    border:none;
+    padding:14px 35px;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:25px;
+}
+
+button:hover{
+    background:#d88f00;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div class="overlay"></div>
+
+<div class="container">
+
+<h1>Electricity Consumption Prediction</h1>
+
+<!-- Prediction Card -->
+
+<div class="card">
+
+<h2>Predicted Electricity Consumption for {{selected_year}}</h2>
+
+<div class="result-number">
+⚡ {{prediction}} <span class="unit">MU</span>
+</div>
+
+<p class="subtitle">
+Predicted electricity consumption based on historical data, regional demand patterns and geographical factors.
+</p>
+
+</div>
+
+<!-- Graph Card -->
+
+<div class="card">
+
+<h2>Monthly Electricity Consumption Trend ({{selected_year}})</h2>
+
+<div class="chart-container">
+<canvas id="trendChart"></canvas>
+</div>
+
+</div>
+
+<!-- Predict Again Button -->
+
+<form action="/prediction">
+<button type="submit">Predict Again</button>
+</form>
+
+</div>
+
+<script>
+
+const months = JSON.parse('{{ months | tojson }}');
+const values = JSON.parse('{{ values | tojson }}');
+
+const ctx = document.getElementById('trendChart').getContext('2d');
+
+new Chart(ctx,{
+type:'line',
+data:{
+labels:[
+"Jan","Feb","Mar","Apr","May","Jun",
+"Jul","Aug","Sep","Oct","Nov","Dec"
+],
+datasets:[{
+label:'Electricity Consumption (MU)',
+data:values,
+borderColor:'#f4a300',
+backgroundColor:'rgba(244,163,0,0.25)',
+borderWidth:3,
+tension:0.45,
+fill:true,
+pointRadius:5,
+pointBackgroundColor:'#f4a300',
+pointHoverRadius:7
+}]
+},
+options:{
+responsive:true,
+plugins:{
+legend:{
+display:true,
+labels:{
+font:{
+size:14
+}
+}
+}
+},
+scales:{
+x:{
+grid:{
+display:false
+}
+},
+y:{
+beginAtZero:false,
+title:{
+display:true,
+text:'Consumption (MU)'
+}
+}
+}
+}
+});
+
+</script>
+
+</body>
+</html>
